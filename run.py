@@ -185,7 +185,11 @@ def output_csv(asns):
 # ── Main ──
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        raw = input("  输入 ASN 编号 (多个用逗号分隔): ").strip()
+        try:
+            raw = input("  输入 ASN 编号 (多个用逗号分隔): ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print(f"\n  请在终端运行: cd {BASE} && python3 run.py\n")
+            sys.exit(0)
         if not raw:
             print("用法: python3 run.py AS209242 或 python3 run.py AS209242,AS3214")
             sys.exit(1)
