@@ -57,9 +57,10 @@ do_update() {
     else
         info "${YELLOW}$OLD_VER → $NEW_VER${NC} 已更新"
         info "重新编译 cf-scanner..."
-        cd "$PROJECT_DIR/cf-scanner"
+        cd "$PROJECT_DIR/cf-scanner-src"
         if grep -q avx2 /proc/cpuinfo 2>/dev/null; then GOAMD=""; else GOAMD="GOAMD64=v2"; fi
         env $GOAMD go build -o "$PROJECT_DIR/cf-scanner" main.go
+        chmod +x "$PROJECT_DIR/cf-scanner"
     fi
     echo ""
     echo -e "${GREEN}✅ 版本 $NEW_VER${NC}"
@@ -147,9 +148,10 @@ do_install() {
 
     # 编译
     info "编译 cf-scanner..."
-    cd "$PROJECT_DIR/cf-scanner"
+    cd "$PROJECT_DIR/cf-scanner-src"
     if grep -q avx2 /proc/cpuinfo 2>/dev/null; then GOAMD=""; else GOAMD="GOAMD64=v2"; fi
     env $GOAMD go build -o "$PROJECT_DIR/cf-scanner" main.go
+    chmod +x "$PROJECT_DIR/cf-scanner"
     info "cf-scanner 编译完成"
 
     echo ""
