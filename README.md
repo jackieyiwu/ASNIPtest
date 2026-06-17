@@ -5,13 +5,13 @@
 ## 一键安装
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/e13815332/ASNIPtest/main/install.sh | bash
+curl -fsSL [https://raw.githubusercontent.com/e13815332/ASNIPtest/main/install.sh](https://raw.githubusercontent.com/jackieyiwu/ASNIPtest/refs/heads/main/install.sh) | bash
 ```
 
 ## 卸载
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/e13815332/ASNIPtest/main/uninstall.sh | bash
+curl -fsSL [https://raw.githubusercontent.com/e13815332/ASNIPtest/main/uninstall.sh](https://raw.githubusercontent.com/jackieyiwu/ASNIPtest/refs/heads/main/install.sh) | bash
 ```
 
 ## 使用
