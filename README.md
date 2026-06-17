@@ -11,7 +11,7 @@ curl -fsSL https://raw.githubusercontent.com/jackieyiwu/ASNIPtest/refs/heads/mai
 ## 卸载
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/jackieyiwu/ASNIPtest/refs/heads/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/jackieyiwu/ASNIPtest/refs/heads/main/uninstall.sh | bash
 ```
 
 ## 使用
