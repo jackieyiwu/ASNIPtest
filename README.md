@@ -1,26 +1,10 @@
 # ASNIPtest
 
-从 ASN 拉取 IP 段 → 端口扫描 → Cloudflare 反代节点检测 → 输出可用 CF 节点。
+原作者删库,此为备份研究学习用. 
 
-## 一键安装
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/jackieyiwu/ASNIPtest/refs/heads/main/install.sh | bash
-```
-
-## 卸载
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/jackieyiwu/ASNIPtest/refs/heads/main/uninstall.sh | bash
-```
-
-## 使用
-
-```bash
-cd ~/ASNIPtest
-python3 run.py AS209242
-```
-
+ 
+ 
+ ASN 拉取 IP 段 → 端口扫描 → Cloudflare 反代节点检测 → 输出可用 CF 节点。42## 一键
 多个 ASN：
 
 ```bash
@@ -35,7 +19,8 @@ python3 run.py AS209242,AS3214
 Tmux 允许你在一个会话中运行任务，即使断开连接，任务也会在后台继续。
 
 *   **创建会话**：`tmux new -s asnip`
-*   **执行任务**：在会话内执行 `python3 run.py AS45102`
+*   **执行任务**：在会话内执```
+ython3 run.py AS45102`
 *   **退出会话** (让任务后台运行)：按下 `Ctrl + B`，然后松开按键，再按下 `D` 键。
 *   **恢复会话**：再次连接 SSH 后，输入 `tmux attach -t asnip` 即可回到运行界面查看输出。
 
